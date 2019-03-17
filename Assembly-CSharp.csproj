@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_ACElement.cs" />
+     <Compile Include="Assets\_functionVA.cs" />
      <Compile Include="Assets\_Parameters.cs" />
      <Compile Include="Assets\_RandomGoomba.cs" />
      <Compile Include="Assets\_RandomGround.cs" />

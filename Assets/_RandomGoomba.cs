@@ -10,7 +10,7 @@ public class _RandomGoomba : _ACElement
     void Start()
     {
         int length = 210;
-        int prob_from_main = (_Parameters.Ground_prob == null || _Parameters.Goomba_prob.Trim() == string.Empty) ? 10 : int.Parse(_Parameters.Goomba_prob);
+        int prob_from_main = 20;// (_Parameters.Ground_prob == null || _Parameters.Goomba_prob.Trim() == string.Empty) ? 10 : int.Parse(_Parameters.Goomba_prob);
         List<Tuple<float, float>> coord = Fill_Coord(prob_from_main, length,90,-4f,0f);
 
         for (int i = 0; i < coord.Count; i++)
@@ -20,10 +20,10 @@ public class _RandomGoomba : _ACElement
                 System.Random rnd = new System.Random();
                 coord[i].First = rnd.Next(0, length);                
             }
-            _Parameters.Coord_global.Add(new Tuple<float, float>(coord[i].First, coord[i].Second));
+            //_Parameters.Coord_global.Add(new Tuple<float, float>(coord[i].First, coord[i].Second));
         }
 
-        Instantiate_Element(enemy, coord);
+        //Instantiate_Element(enemy, coord);
     }
 
 }

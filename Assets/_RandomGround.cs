@@ -11,9 +11,10 @@ public class _RandomGround : MonoBehaviour
 
     void Start()
     {
-        int prob_from_main = (_Parameters.Ground_prob == null || _Parameters.Ground_prob.Trim() == string.Empty) ? 100 : int.Parse(_Parameters.Ground_prob);
+        int prob_from_main = 20;// (_Parameters.Ground_prob == null || _Parameters.Ground_prob.Trim() == string.Empty) ? 100 : int.Parse(_Parameters.Ground_prob);
         List<int> coord = Fill_Coord(prob_from_main);
         Instantiate_Ground(Complete_Coord(coord));
+        //Instantiate_Ground(coord);
     }
 
     List<int> Fill_Coord(int prob)
